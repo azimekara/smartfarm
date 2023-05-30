@@ -46,6 +46,6 @@ Smart Farm projesi 4 tasktan oluşmaktadır. Projede amaç, sensörlerden alına
 
 #### -Donanım Görünümü
 
-![image](https://github.com/azimekara/smartfarm-webtek-/blob/main/fritzingcizimleri/gazsistemifritzing.PNG)
+![image](https://github.com/azimekara/smartfarm-webtek-/blob/main/fritzingcizimleri/mesafesistemifritzing.PNG)
 
 
