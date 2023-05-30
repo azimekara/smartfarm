@@ -4,7 +4,6 @@
 -Web Görünümü
 
 ![image](https://github.com/azimekara/smartfarm-webtek-/blob/main/websitesigorunumu/yagmursensorugorunumu.png)
-
 -Donanım Görünümü
 
 
