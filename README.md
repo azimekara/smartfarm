@@ -5,7 +5,7 @@ Smart Farm projesi 4 tasktan oluşmaktadır. Projede amaç, sensörlerden alına
 
 ![image](https://github.com/azimekara/smartfarm-webtek-/blob/main/websitesigorunumu/anaekran.png)
 
-1-) Yağmur sensörü kullanılarak yağmur algılanacak, web sitesine uyarı gönderilecek ve ağılın üstündeki perde webden yavaş-orta-hızlı olacak şekilde manuel olarak kapatılacak.	
+1-) Yağmur sensörü kullanılarak yağmur algılanacak, web sitesine uyarı gönderilecek ve ağılın üstündeki perde webden yavaş-orta-hızlı olacak şekilde manuel olarak kapatılacak.(Çatı kontrolü step motor kullanılarak yapılmıştır.)
 
 #### -Web Görünümü
 
