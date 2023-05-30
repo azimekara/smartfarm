@@ -5,7 +5,7 @@ Smart Farm projesi 4 tasktan oluşmaktadır. Projede amaç, sensörlerden alına
 
 ![image](https://github.com/azimekara/smartfarm-webtek-/blob/main/websitesigorunumu/anaekran.png)
 
-1-) Yağmur sensörü kullanılarak yağmur algılanacak, web sitesine uyarı gönderilecek ve ağılın üstündeki perde webden yavaş-orta-hızlı manuel olarak kapatılacak.	
+1-) Yağmur sensörü kullanılarak yağmur algılanacak, web sitesine uyarı gönderilecek ve ağılın üstündeki perde webden yavaş-orta-hızlı olacak şekilde manuel olarak kapatılacak.	
 
 #### -Web Görünümü
 
@@ -16,7 +16,7 @@ Smart Farm projesi 4 tasktan oluşmaktadır. Projede amaç, sensörlerden alına
 ![image](https://github.com/azimekara/smartfarm-webtek-/blob/main/fritzingcizimleri/rainsistemifritzing.png)
 
 
-2-)Hayvanlar touch sensörü kullanılarak ağıl girişinde sayılacak ve sayı web sitesine gönderilecek. Sistemde kaydolan hayvan sayısıyla karşılaştırılacak .Hayvan sayısı bilinenden azsa webden buzzer öttürülecek. Hayvan sayısı aynı ise webden kapı kapatılacak.	
+2-)Hayvanlar touch sensörü kullanılarak ağıl girişinde sayılacak ve sayı web sitesine gönderilecek. Sistemde kaydolan hayvan sayısıyla karşılaştırılacak, hayvan sayısı bilinenden azsa webden buzzer öttürülecek. Hayvan sayısı aynı ise webden kapı kapatılacak.	
 
 #### -Web Görünümü
 
@@ -27,7 +27,7 @@ Smart Farm projesi 4 tasktan oluşmaktadır. Projede amaç, sensörlerden alına
 ![image](https://github.com/azimekara/smartfarm-webtek-/blob/main/fritzingcizimleri/touchsistemifritzing.PNG)
 
 
-3-) Gaz sensörü kullanılarak ortamda yangın durumunda ortaya çıkacak gazlar algılanarak yangın var ise buzzer çalışacak ve web sitesine uyarı gidecek, webden yavaş-orta-hızlı şekilde fan çalıştırılacak.			
+3-) Gaz sensörü kullanılarak ortamda yangın var ise algılanarak web sitesine uyarı gidecek, webden buzzer  ve  yavaş-orta-hızlı şekilde fan çalıştırılacak.			
 
 #### -Web Görünümü
 
@@ -38,7 +38,7 @@ Smart Farm projesi 4 tasktan oluşmaktadır. Projede amaç, sensörlerden alına
 ![image](https://github.com/azimekara/smartfarm-webtek-/blob/main/fritzingcizimleri/gazsistemifritzing.PNG)
 
 
-4-)Mesafe sensöründen alınan veri ile olukta yem olup olmadığı kontrol edilecek ve yem durumu web sitesine gösterilecek. Web sitesinden %30,%60,%100 seçenekleri ile yem eklemesi yapılacak.			
+4-)Mesafe sensöründen alınan veri ile olukta durumu kontrol edilecek ve web sitesinde gösterilecek. Web sitesinden %30,%60,%100 seçenekleri ile yem eklemesi yapılacak.			
 
 #### -Web Görünümü
 
