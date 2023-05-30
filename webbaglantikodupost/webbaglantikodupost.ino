@@ -4,13 +4,15 @@
 #include <ESP8266HTTPClient.h>
 #include <Arduino_JSON.h>
 
-const char* ssid = "FiberHGW_ZTYUD5_2.4GHz"; // Wifi kullanıcı adını yazın
-const char* pwd = "A3RfuUFyEsY9"; //Wifi parolanızı yazın
+const char* ssid = "HUAWEI Mate 20 lite"; // Wifi kullanıcı adını yazın
+const char* pwd = "eac6a6c8217f"; //Wifi parolanızı yazın
 
 String owmWeb = "http://ipmapi.ipmsoft.com.tr/api/RainSensor/SendData" ;
 
-String counter="0";
-float counter1=1;
+String counter = "0";
+float counter1 = 1;
+
+String tagID="1";
 
 void setup() {
   Serial.begin(115200);
@@ -23,12 +25,12 @@ void setup() {
     delay(500);
   }
   Serial.println(" bağlandı.");
-  }
+}
 void loop() {
   WiFiClient wfc;
   HTTPClient http;
   const char* address = owmWeb.c_str();
-  http.begin(wfc,address);
+  http.begin(wfc, address);
   http.addHeader("Content-Type", "application/json");
   int httpResponseCode = http.POST("{\"isRain\":\"1\"}");
   Serial.println(httpResponseCode);

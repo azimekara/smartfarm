@@ -1,43 +1,54 @@
-
-/*
- Stepper Motor Control - one revolution
-
- This program drives a unipolar or bipolar stepper motor.
- The motor is attached to digital pins 8 - 11 of the Arduino.
-
- The motor should revolve one revolution in one direction, then
- one revolution in the other direction.
-
-
- Created 11 Mar. 2007
- Modified 30 Nov. 2009
- by Tom Igoe
-
- */
-
 #include <Stepper.h>
 
-const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
-// for your motor
 
-// initialize the stepper library on pins 8 through 11:
-Stepper myStepper(stepsPerRevolution, 18, 12, 19, 13);
+int roofstatus=0;
+int stepcount=0;
+const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
+
+// ULN2003 Motor Driver Pins
+#define IN1 19
+#define IN2 18
+#define IN3 5
+#define IN4 17
+
+// initialize the stepper library
+Stepper myStepper(stepsPerRevolution, IN1, IN3, IN2, IN4);
 
 void setup() {
-  // set the speed at 60 rpm:
-  myStepper.setSpeed(50);//50 yavaş,100 orta,180 hızlı
-  // initialize the serial port:
-  Serial.begin(9600);
+  // set the speed at 5 rpm
+
+  // initialize the serial port
+  Serial.begin(115200);
 }
 
 void loop() {
-  // step one revolution  in one direction:
-  Serial.println("clockwise");
-  myStepper.step(stepsPerRevolution);
-//  delay(500);
-//
-//  // step one revolution in the other direction:
-//  Serial.println("counterclockwise");
-//  myStepper.step(-stepsPerRevolution);
-//  delay(500);
+
+  if (Serial.available() > 0)
+  {
+    roofstatus = Serial.read();
+    Serial.println(roofstatus);
+  }
+
+    if (roofstatus == 1)
+  {
+    // set the speed
+    myStepper.setSpeed(50);//50 yavaş
+    myStepper.step(stepsPerRevolution);
+  }
+    else if (roofstatus == 2)
+  {
+    myStepper.setSpeed(100);//100 orta,180 hızlı
+    myStepper.step(stepsPerRevolution);
+  }
+  else if (roofstatus == 3)
+  {
+    myStepper.setSpeed(190);//190 hızlı
+    myStepper.step(stepsPerRevolution);
+  }
+  else if (roofstatus == 4)
+  {
+    myStepper.setSpeed(190);//190 hızlı
+    myStepper.step(-stepsPerRevolution);
+  }
+
 }
