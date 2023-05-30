@@ -1,4 +1,10 @@
 # smartfarm-webtek-
+Smart Farm projesi 4 tasktan oluşmaktadır. Projede amaç, sensörlerden alınan verileri websitesine iletmek ve web sitesinden manuel olarak dönüt sağlamaktır. Donanımda ana kontrol kartı olarak STM32F407 kullanılmış olup ESP32 ile websitesi bağlantısı kurulmuştur. Aşağıda her task açıklanmış, websitesindeki kontrol paneli ve donanım görüntüsü eklenmiştir.
+
+Websitesi Ana Ekran Görünümü
+
+![image](https://github.com/azimekara/smartfarm-webtek-/blob/main/websitesigorunumu/anaekran.png)
+
 1-) Yağmur sensörü kullanılarak yağmur algılanacak, web sitesine uyarı gönderilecek ve ağılın üstündeki perde webden yavaş-orta-hızlı manuel olarak kapatılacak.	
 
 -Web Görünümü
