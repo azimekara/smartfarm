@@ -1,0 +1,57 @@
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\bin\Debug\net7.0\Business.deps.json
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\bin\Debug\net7.0\Business.runtimeconfig.json
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\bin\Debug\net7.0\Business.dll
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\bin\Debug\net7.0\Business.pdb
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\bin\Debug\net7.0\DataAccess.dll
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\bin\Debug\net7.0\Entities.dll
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\bin\Debug\net7.0\DataAccess.pdb
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\bin\Debug\net7.0\Entities.pdb
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\Business.csproj.AssemblyReference.cache
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\Business.AssemblyInfoInputs.cache
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\Business.AssemblyInfo.cs
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\Business.csproj.CoreCompileInputs.cache
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\Business.csproj.CopyComplete
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\Business.dll
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\refint\Business.dll
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\Business.pdb
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\Business.genruntimeconfig.cache
+D:\source\2023Projeler\SmartFarm\SmartFarm\Business\obj\Debug\net7.0\ref\Business.dll
+D:\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Business.deps.json
+D:\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Business.runtimeconfig.json
+D:\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Business.dll
+D:\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Business.pdb
+D:\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\DataAccess.dll
+D:\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Entities.dll
+D:\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\DataAccess.pdb
+D:\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Entities.pdb
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.csproj.AssemblyReference.cache
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.AssemblyInfoInputs.cache
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.AssemblyInfo.cs
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.csproj.CoreCompileInputs.cache
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.csproj.CopyComplete
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.dll
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\refint\Business.dll
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.pdb
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.genruntimeconfig.cache
+D:\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\ref\Business.dll
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Business.deps.json
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Business.runtimeconfig.json
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Business.dll
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Business.pdb
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\DataAccess.dll
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Entities.dll
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\DataAccess.pdb
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\bin\Debug\net7.0\Entities.pdb
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.csproj.AssemblyReference.cache
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.AssemblyInfoInputs.cache
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.AssemblyInfo.cs
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.csproj.CopyComplete
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.dll
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\refint\Business.dll
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.pdb
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\Business.genruntimeconfig.cache
+C:\Users\Azime\Desktop\AzimaKARA\Açık Kaynak Kodları\Business\obj\Debug\net7.0\ref\Business.dll

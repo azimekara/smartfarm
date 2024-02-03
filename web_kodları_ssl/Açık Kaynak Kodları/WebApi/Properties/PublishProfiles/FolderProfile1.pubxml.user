@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <History>True|2023-05-19T11:26:25.5395006Z;True|2023-05-19T12:18:42.4389403+03:00;True|2023-05-19T12:10:46.7862722+03:00;True|2023-05-03T14:55:58.9090904+03:00;True|2023-05-01T23:45:06.7768421+03:00;False|2023-05-01T23:44:40.2716015+03:00;</History>
+    <LastFailureDetails />
+    <_PublishTargetUrl>D:\Publish\webapi</_PublishTargetUrl>
+  </PropertyGroup>
+</Project>

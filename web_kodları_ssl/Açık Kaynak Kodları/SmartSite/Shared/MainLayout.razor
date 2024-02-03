@@ -1,0 +1,43 @@
+﻿
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+<BlazoredToasts Position="ToastPosition.TopRight"
+                Timeout="1"
+                IconType="IconType.FontAwesome"
+                ErrorIcon="fa-solid fa-circle-exclamation"
+                ShowProgressBar="false"
+                RemoveToastsOnNavigation="true"
+                PauseProgressOnHover="true"
+                MaxToastCount="3"
+                WarningIcon="warning" />
+
+<div class="card w-100">
+    <DxMenu CollapseItemsToHamburgerMenu="true"
+            CollapseItemToIconMode="MenuCollapseItemToIconMode.Sequentially"
+            DisplayMode="MenuDisplayMode.Auto">
+        <TitleTemplate>
+            <div>
+                <a href="./">
+                    <img src="images/smartlogo.png" />
+                </a>
+            </div>
+        </TitleTemplate>
+        <Items>
+            <DxMenuItem Position="ItemPosition.End" Text="AnaSayfa" NavigateUrl="./" IconCssClass="fa-solid fa-house" />
+            <DxMenuItem Position="ItemPosition.End" Text="Yağmur Sensörü" NavigateUrl="/Yagmur-Sensoru" IconCssClass="fa-solid fa-cloud-rain" />
+            <DxMenuItem Position="ItemPosition.End" Text="Yem Sensörü" NavigateUrl="/Yem-Sensörü" IconCssClass="fa-solid fa-cow" />
+            <DxMenuItem Position="ItemPosition.End" Text="Yangın Sensörü" NavigateUrl="/Yangın-Sensörü" IconCssClass="fa-solid fa-fire" />
+            <DxMenuItem Position="ItemPosition.End" Text="Kapı Sensörü" NavigateUrl="/Kapı-Sensörü" IconCssClass="fa-solid fa-door-open" />
+            @*<DxMenuItem Position="ItemPosition.End" Text="Parametreler" NavigateUrl="/Parametreler" IconCssClass="fa-solid fa-gear" />*@
+        </Items>
+    </DxMenu>
+
+</div>
+
+<div class="page">
+
+    @Body
+
+
+</div>

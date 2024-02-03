@@ -1,0 +1,29 @@
+.page[b-y81o985433] {
+    height: 100%;
+    overflow: scroll;
+    background-color: inherit;
+}
+[b-y81o985433] .page-layout,
+[b-y81o985433] .page-layout > .dx-gridlayout-root,
+[b-y81o985433] .layout-item {
+    background-color: inherit;
+}
+
+[b-y81o985433] .content {
+    padding: 1.1rem 2rem 0 2rem;
+    overflow: auto;
+}
+
+@media (max-width: 1199.98px) {
+    [b-y81o985433] .page-layout > .dx-gridlayout-root {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+}
+
+[b-y81o985433] .fit-width {
+    max-width: 100%;
+}
+
+[b-y81o985433] .mw-1100 {
+    max-width: 1100px;
+}

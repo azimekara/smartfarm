@@ -1,0 +1,73 @@
+﻿@inject IFireFunService FanManager
+@inject IToastService ToastManager
+<div class="row mt-2">
+    <div class="col-md-12 mt-2">
+        <button class="btn btn-info" @onclick="(()=>SendFanData(1))" style="width:100%; height:80px;">Fanı Yavaş Çalıştır</button>
+    </div>
+    <div class="col-md-12 mt-2">
+        <button class="btn btn-info" @onclick="(()=>SendFanData(2))" style="width:100%; height:80px;">Fanı Normal Çalıştır</button>
+    </div>
+    <div class="col-md-12 mt-2">
+        <button class="btn btn-info" @onclick="(()=>SendFanData(3))" style="width:100%; height:80px;">Fanı Hızlı Çalıştır</button>
+    </div>
+    <div class="col-md-12 mt-2">
+        <button class="btn btn-info" @onclick="(()=>SendFanData(4))" style="width:100%; height:80px;">Fanı Kapat</button>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-md-12 mt-2">
+        <div class="card text-center @_cardbg text-white" style="width:100%; height:100px;">
+            <h2 class="mt-4">@_fanstring</h2>
+        </div>
+    </div>
+</div>
+
+@code {
+    string? _fanstring;
+    FireFun? fireFan;
+    string? _cardbg;
+    protected override void OnInitialized()
+    {
+        ChangeBuzzerString();
+        StateHasChanged();
+    }
+
+    public async void ChangeBuzzerString()
+    {
+        fireFan = await FanManager.EndDataGet();
+        if (fireFan.Activity == 1)
+        {
+            _cardbg = "bg-success";
+            _fanstring = "Fan Yavaş Çalışıyor";
+        }
+        else if (fireFan.Activity == 2)
+        {
+            _cardbg = "bg-success";
+            _fanstring = "Fan Normal Hızda Çalışıyor";
+        }
+        else if (fireFan.Activity == 3)
+        {
+            _cardbg = "bg-success";
+            _fanstring = "Fan Hızlı Çalışıyor";
+        }
+        else
+        {
+            _cardbg = "bg-danger";
+            _fanstring = "Fan Kapalı";
+        }
+        StateHasChanged();
+    }
+
+    public void SendFanData(int id)
+    {
+        FireFun fireFan = new FireFun();
+        fireFan.Activity = id;
+        fireFan.Date = DateTime.Now;
+        FanManager.Add(fireFan);
+        ChangeBuzzerString();
+        ToastManager.ShowSuccess(_fanstring);
+        StateHasChanged();
+    }
+}
+

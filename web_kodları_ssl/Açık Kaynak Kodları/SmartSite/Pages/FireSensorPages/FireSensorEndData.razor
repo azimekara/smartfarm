@@ -1,0 +1,51 @@
+﻿@inject IFireSensorService fireSensorManager
+@if(fireSensor is null)
+{
+    <p>No data</p>
+}
+else if(fireSensor.isFire == 1)
+{
+    <img src="images/firecardS/2.png" style="width: 100%; height: 850px;" />
+}
+else
+{
+    <img src="images/firecardS/1.png" style="width: 100%; height: 850px;" />
+}
+
+
+@code {
+    FireSensor? fireSensor { get; set; }
+    string? _imagesUrl;
+    private Timer FireSensortimer;
+    protected override async void OnInitialized()
+    {
+        fireSensor = await fireSensorManager.GetEndData();
+        await FireTimer();
+    }
+
+    protected async Task FireTimer()
+    {
+        FireSensortimer = new Timer(async (_) =>
+        {
+            GetEndData();
+
+        }, null, TimeSpan.Zero, TimeSpan.FromSeconds(3));
+    }
+
+    async void GetEndData()
+    {
+        try
+        {
+            await InvokeAsync(async () =>
+            {
+                fireSensor = await fireSensorManager.GetEndData();
+
+                StateHasChanged();
+            });
+        }
+        catch
+        {
+
+        }
+    }
+}

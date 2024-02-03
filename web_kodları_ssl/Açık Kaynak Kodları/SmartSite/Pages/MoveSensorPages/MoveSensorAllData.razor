@@ -1,0 +1,22 @@
+﻿@inject IMoveSensorService moveSensorManager
+
+<DxGrid CssClass="w-100"
+        PagerNavigationMode="PagerNavigationMode.InputBox"
+        Data="@moveSensors" KeyFieldName="Id"
+        FocusedRowEnabled="false" PageSize="15"
+        ShowFilterRow="true" ShowGroupedColumns="false" ShowSearchBox="false">
+    <Columns>
+        <DxGridDataColumn FieldName="Id" Caption="Id" Width="110" TextAlignment="GridTextAlignment.Center" />
+        <DxGridDataColumn FieldName="AnimalNumber" Caption="Hayvan Sayısı" MinWidth="100" TextAlignment="GridTextAlignment.Center" />
+        <DxGridDataColumn FieldName="Date" Caption="Tarih" MinWidth="100" TextAlignment="GridTextAlignment.Center" />
+    </Columns>
+
+</DxGrid>
+
+@code {
+    List<MoveSensor>? moveSensors { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        moveSensors = await moveSensorManager.GetMoveSensorAllData();
+    }
+}
