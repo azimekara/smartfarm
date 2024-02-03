@@ -1,0 +1,51 @@
+﻿@inject IFoodMachineService foodMachineManager
+@inject IToastService ToastManager
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <button class="btn" style="width:100%; height:100px; background-color:#557D96;" @onclick="(()=>SendMachineData(1))">
+            <h3 class="text-white">  %30 Doldur </h3>
+        </button>
+    </div>
+    <div class="col-md-4">
+        <button class="btn" style="width:100%; height:100px; background-color:#557D96;" @onclick="(()=>SendMachineData(2))">
+            <h3 class="text-white">  %60 Doldur </h3>
+        </button>
+    </div>
+    <div class="col-md-4">
+        <button class="btn" style="width:100%; height:100px; background-color:#557D96;" @onclick="(()=>SendMachineData(3))">
+            <h3 class="text-white">  %100 Doldur </h3>
+        </button>
+    </div>
+</div>
+
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        //ChangeBuzzerString();
+        StateHasChanged();
+    }
+
+    public void SendMachineData(int id)
+    {
+        FoodMachineDto foodMachineDto = new FoodMachineDto();
+        foodMachineDto.FillingType = id;
+
+        foodMachineManager.Add(foodMachineDto);
+        switch (id)
+        {
+            case 1:
+                ToastManager.ShowSuccess("Oluk %30 seviyesine kadar dolduruluyor");
+                break;
+            case 2:
+                ToastManager.ShowSuccess("Oluk %60 seviyesine kadar dolduruluyor");
+                break;
+            case 3:
+                ToastManager.ShowSuccess("Oluk %100 seviyesine kadar dolduruluyor");
+                break;
+        }
+        StateHasChanged();
+    }
+}

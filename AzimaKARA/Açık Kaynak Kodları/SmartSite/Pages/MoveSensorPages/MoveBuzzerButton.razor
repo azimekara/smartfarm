@@ -1,0 +1,72 @@
+﻿@inject IMoveBuzzerService moveBuzzerManager
+@inject IToastService ToastManager
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="row">
+            <img src="@_buzzerimageUrl" style="height:400px; width:auto;" />
+        </div>
+    </div>
+    <div class="col-md-6">
+
+        <button class="btn btn-outline-primary" @onclick="(()=>AddBuzzerActivity(1))" style="width:100%; height: 200px;"> <h1>Buzzer Aç</h1> </button>
+        <br /> <br />
+        <button class="btn btn-outline-primary" @onclick="(()=>AddBuzzerActivity(0))" style="width:100%; height: 200px;"> <h1>Buzzer Kapat</h1> </button>
+
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="col-md-12 mt-2">
+        <div class="card text-center @_cardbg text-white" style="width:100%; height:100px;">
+            <h2 class="mt-4">@_endDataBuzzer</h2>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    string? _buzzerimageUrl;
+    string? _endDataBuzzer;
+    string? _cardbg;
+
+    protected override void OnInitialized()
+    {
+        EndDataBuzzer();
+    }
+    async void EndDataBuzzer()
+    {
+        var value = await moveBuzzerManager.GetEndData();
+
+        if (value.BuzzerActivity == 1)
+        {
+            _endDataBuzzer = "Buzzer Açık ";
+            _cardbg = "bg-danger";
+            _buzzerimageUrl = "images/buzzer/1.png";
+        }
+        else
+        {
+            _endDataBuzzer = "Buzzer Kapalı ";
+            _cardbg = "bg-warning";
+            _buzzerimageUrl = "images/buzzer/2.png";
+        }
+        StateHasChanged();
+    }
+
+    void AddBuzzerActivity(int id)
+    {
+        if (id == 1)
+        {
+            _buzzerimageUrl = "images/dooropen.png";
+        }
+        else
+        {
+            _buzzerimageUrl = "images/doorclose.png";
+        }
+
+        MoveBuzzerDto moveBuzzerDto = new MoveBuzzerDto();
+        moveBuzzerDto.BuzzerActivity = id;
+        moveBuzzerManager.Add(moveBuzzerDto);
+        EndDataBuzzer();
+        ToastManager.ShowSuccess("İşlem Başarılı");
+    }
+}

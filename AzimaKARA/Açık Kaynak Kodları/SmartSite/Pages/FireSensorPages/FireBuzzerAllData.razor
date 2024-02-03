@@ -1,0 +1,34 @@
+﻿@inject IFireBuzzerService fireBuzzerManager
+
+<DxGrid CssClass="w-100"
+        PagerNavigationMode="PagerNavigationMode.InputBox"
+        Data="@fireBuzzerList" KeyFieldName="Id"
+        FocusedRowEnabled="false" PageSize="7"
+        ShowFilterRow="false" ShowGroupedColumns="false" ShowSearchBox="false">
+    <Columns>
+        <DxGridDataColumn FieldName="Id" Caption="Id" Width="60" TextAlignment="GridTextAlignment.Center" />
+        <DxGridDataColumn FieldName="BuzzerActivity" Caption="Yangın Bilgisi" MinWidth="100" TextAlignment="GridTextAlignment.Center">
+            <CellDisplayTemplate>
+                @if (context.Value is 1)
+                {
+                    <img src="images/openbuzzer.png" style="height:40px; width:40px;" />
+                }
+                else
+                {
+                    <img src="images/closebuzzer.png" style="height:40px; width:40px;" />
+                }
+            </CellDisplayTemplate>
+        </DxGridDataColumn>
+        <DxGridDataColumn FieldName="Date" Caption="Tarih" Width="300" TextAlignment="GridTextAlignment.Center" />
+    </Columns>
+
+</DxGrid>
+
+
+@code {
+    List<FireBuzzer>? fireBuzzerList { get; set; }
+    protected override async void OnInitialized()
+    {
+        fireBuzzerList = await fireBuzzerManager.GetAllData();
+    }
+}

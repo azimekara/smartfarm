@@ -1,0 +1,67 @@
+﻿@inject IFireBuzzerService fireBuzzerManager
+@inject IToastService ToastManager
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-info" style="width:100%; height:100px;" @onclick="(()=>SendBuzzerData(1))">Buzzer Aç</button>
+    </div>
+    <div class="col-md-12 mt-2">
+        <button class="btn btn-info" style="width:100%; height:100px;" @onclick="(()=>SendBuzzerData(2))">Buzzer Kapat</button>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-md-12 mt-2">
+        <div class="card text-center @_cardbg text-white" style="width:100%; height:100px;">
+            <h2 class="mt-4">@endbuzzerstring</h2>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    FireBuzzer? endDataBuzzer;
+    string? endbuzzerstring;
+    bool _popupvisible;
+    string? _saveBoxHeader;
+    string? _cardbg;
+
+    protected override void OnInitialized()
+    {
+        ChangeBuzzerString();
+        StateHasChanged();
+    }
+
+    public async void ChangeBuzzerString()
+    {
+        endDataBuzzer = await fireBuzzerManager.GetEndData();
+        if (endDataBuzzer.BuzzerActivity == 1)
+        {
+            _cardbg = "bg-danger";
+            endbuzzerstring = "Buzzer Açık";
+        }
+        else
+        {
+            _cardbg = "bg-warning";
+            endbuzzerstring = "Buzer Kapalı";
+        }
+
+
+        StateHasChanged();
+    }
+
+
+
+    public void SendBuzzerData(int id)
+    {
+
+        FireBuzzer fireBuzzer = new FireBuzzer();
+        fireBuzzer.BuzzerActivity = id;
+        fireBuzzer.Date = DateTime.Now;
+        fireBuzzerManager.Add(fireBuzzer);
+        ChangeBuzzerString();
+        ToastManager.ShowSuccess("Buzer çalıştırma işlemi başarılı");
+        StateHasChanged();
+    }
+
+
+}

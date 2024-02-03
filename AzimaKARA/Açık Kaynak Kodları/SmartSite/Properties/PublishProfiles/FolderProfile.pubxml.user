@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\source\2023Projeler\SmartFarm\SmartFarm\SmartSite\bin\Release\net7.0\publish\</_PublishTargetUrl>
+    <History>True|2023-05-23T09:38:54.8489661Z;True|2023-05-23T12:22:15.7191252+03:00;True|2023-05-22T18:13:46.6394475+03:00;True|2023-05-22T18:09:42.6202620+03:00;True|2023-05-21T23:57:56.2938063+03:00;True|2023-05-21T01:53:54.6041378+03:00;True|2023-05-18T17:53:18.3706939+03:00;True|2023-05-08T01:34:55.9500822+03:00;True|2023-05-06T02:46:23.5469153+03:00;True|2023-05-06T02:44:43.4256174+03:00;True|2023-05-05T20:10:25.6577861+03:00;True|2023-05-04T18:23:03.5010188+03:00;True|2023-05-04T00:21:23.3595579+03:00;True|2023-05-03T23:34:43.8108728+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

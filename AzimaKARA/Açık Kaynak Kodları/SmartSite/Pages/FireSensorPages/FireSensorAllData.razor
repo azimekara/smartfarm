@@ -1,0 +1,34 @@
+﻿@inject IFireSensorService fireSensorManager
+
+<DxGrid CssClass="w-100"
+        PagerNavigationMode="PagerNavigationMode.InputBox"
+        Data="@fireSensors" KeyFieldName="Id"
+        FocusedRowEnabled="false" PageSize="16"
+        ShowFilterRow="false" ShowGroupedColumns="false" ShowSearchBox="false">
+    <Columns>
+        <DxGridDataColumn FieldName="Id" Caption="Id" Width="60" TextAlignment="GridTextAlignment.Center" />
+        <DxGridDataColumn FieldName="isFire" Caption="Yangın Bilgisi" MinWidth="100" TextAlignment="GridTextAlignment.Center">
+            <CellDisplayTemplate>
+                @if (context.Value is 1)
+                {
+                    <img src="images/fire.png" style="height:40px; width:40px;" />
+                }
+                else
+                {
+                    <img src="images/nofire.png" style="height:40px; width:40px;" />
+                }
+            </CellDisplayTemplate>
+        </DxGridDataColumn>
+        <DxGridDataColumn FieldName="date" Caption="Tarih" MinWidth="100" TextAlignment="GridTextAlignment.Center" />
+    </Columns>
+
+</DxGrid>
+
+
+@code {
+    List<FireSensor>? fireSensors { get; set; }
+    protected override async void OnInitialized()
+    {
+        fireSensors = await fireSensorManager.GetAllData();
+    }
+}
